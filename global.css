@@ -9,7 +9,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-
+  --color-primary-light: #F9A15B;
+  --color-sun: #F5C242;
+  --color-leaf: #2F7D3A;
   --spacing-hairline: hairlineWidth();
 }
 
