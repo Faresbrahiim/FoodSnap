@@ -36,7 +36,7 @@ export default function Screen() {
             1. Edit <Text variant="code">app/index.tsx</Text> to get started.
           </Text>
           <Text className="ios:text-foreground text-muted-foreground font-mono text-sm">
-            2. Save to see your changes instantly.
+          hello hello testing my app 
           </Text>
         </View>
         <View className="flex-row gap-2">
