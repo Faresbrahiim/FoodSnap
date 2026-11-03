@@ -10,6 +10,7 @@
     "clean": "rm -rf .expo node_modules"
   },
   "dependencies": {
+    "@expo/ui": "^58.0.26",
     "@rn-primitives/accordion": "^1.5.2",
     "@rn-primitives/alert-dialog": "^1.5.2",
     "@rn-primitives/aspect-ratio": "^1.5.2",
