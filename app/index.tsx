@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 
@@ -9,7 +9,6 @@ import { Tagline } from '@/components/ui/Tagline';
 import { TextLink } from '@/components/ui/TextLink';
 import { HeroIllustration } from '@/components/ui/HeroIllustration';
 
-// ps safearea view is used to avoid the notch and other screen cutouts on modern devices. It ensures that the content is displayed within the safe area of the screen, preventing it from being obscured by hardware features like notches or rounded corners.
 export default function SplashScreen() {
   const router = useRouter();
 
@@ -23,21 +22,28 @@ export default function SplashScreen() {
           <Tagline>{'De tes ingrédients \n à ton prochain plat'}</Tagline>
         </View>
 
-       <HeroIllustration />
+        <HeroIllustration />
 
-       <View className="items-center gap-3 ">
+        <View className="items-center gap-3 ">
           <View className="w-4/5">
             <PrimaryButton
-            label="Commencer"
-            onPress={() => router.push('/home')}
+              label="Commencer"
+              onPress={() => router.push('/home')}
             />
-         </View>
+          </View>
 
           <TextLink
-          label="Se connecter"
-          onPress={() => router.push('/login')}
+            label="Se connecter"
+            onPress={() => router.push('/login')}
           />
-       </View >
+
+          {/* TEMP: test link, delete later */}
+          <Pressable onPress={() => router.push('/profile')}>
+            <Text className="text-xs text-muted-foreground underline">
+              [dev] Profil
+            </Text>
+          </Pressable>
+        </View>
       </SafeAreaView>
     </View>
   );
