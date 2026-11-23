@@ -1,4 +1,4 @@
-import { Pressable, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 
@@ -16,34 +16,40 @@ export default function SplashScreen() {
     <View className="flex-1 bg-background">
       <Decorations />
 
-      <SafeAreaView className="flex-1 ">
-        <View className="items-center">
-          <Logo />
-          <Tagline>{'De tes ingrédients \n à ton prochain plat'}</Tagline>
-        </View>
-
-        <HeroIllustration />
-
-        <View className="items-center gap-3 ">
-          <View className="w-4/5">
-            <PrimaryButton
-              label="Commencer"
-              onPress={() => router.push('/home')}
-            />
+      <SafeAreaView className="flex-1">
+        <ScrollView
+          contentContainerStyle={{ flexGrow: 1, justifyContent: 'space-between' }}
+          showsVerticalScrollIndicator={false}
+          bounces={false}
+        >
+          <View className="items-center">
+            <Logo />
+            <Tagline>{'De tes ingrédients \n à ton prochain plat'}</Tagline>
           </View>
 
-          <TextLink
-            label="Se connecter"
-            onPress={() => router.push('/login')}
-          />
+          <HeroIllustration />
 
-          {/* TEMP: test link, delete later */}
-          <Pressable onPress={() => router.push('/profile')}>
-            <Text className="text-xs text-muted-foreground underline">
-              [dev] Profil
-            </Text>
-          </Pressable>
-        </View>
+          <View className="items-center gap-3 pb-6">
+            <View className="w-4/5">
+              <PrimaryButton
+                label="Commencer"
+                onPress={() => router.push('/home')}
+              />
+            </View>
+
+            <TextLink
+              label="Se connecter"
+              onPress={() => router.push('/login')}
+            />
+
+            {/* TEMP: test link, delete later */}
+            <Pressable className="py-2" onPress={() => router.push('/profile')}>
+              <Text className="text-xs text-muted-foreground underline">
+                [dev] Profil
+              </Text>
+            </Pressable>
+          </View>
+        </ScrollView>
       </SafeAreaView>
     </View>
   );

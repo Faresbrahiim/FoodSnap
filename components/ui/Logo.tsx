@@ -2,7 +2,7 @@ import { Image, Text, View } from 'react-native';
 
 export function Logo() {
   return (
-    <View className="mt-20 items-center">
+    <View className=" items-center">
       <Image
         source={require('@/assets/images/chef-hat.png')}
         className="h-30 w-30"
