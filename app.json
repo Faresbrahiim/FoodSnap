@@ -1,3 +1,4 @@
+
 {
   "expo": {
     "name": "FoodSnap",
@@ -6,10 +7,20 @@
     "orientation": "portrait",
     "scheme": "minimal",
     "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#FDF3E7"
       }
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
     },
     "plugins": [
       "expo-router",
