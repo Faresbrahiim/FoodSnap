@@ -11,7 +11,7 @@ type Tab = {
 
 const TABS: Tab[] = [
   { label: "Accueil", route: "/home", icon: "home-outline", iconActive: "home" },
-  { label: "Caméra", route: "/camera", icon: "camera-outline", iconActive: "camera" },
+  { label: "Caméra", route: "/scan", icon: "camera-outline", iconActive: "camera" },
   { label: "Favoris", route: "/favorites", icon: "heart-outline", iconActive: "heart" },
   { label: "Messages", route: "/messages", icon: "chatbubble-outline", iconActive: "chatbubble" },
   { label: "Profil", route: "/profile", icon: "person-outline", iconActive: "person" },
