@@ -17,6 +17,9 @@ import { AuthHeader } from '@/components/auth/AuthHeader';
 import { CustomInput } from '@/components/auth/CustomInput';
 import { PrimaryButton } from '@/components/auth/PrimaryButton';
 import { SocialLogin } from '@/components/auth/SocialLogin';
+// import { Redirect } from 'expo-router/build/link/index.js';
+
+import { useRouter } from 'expo-router';
 
 type ActiveField = 'email' | 'password';
 export default function LoginScreen() {
@@ -152,10 +155,11 @@ export default function LoginScreen() {
   };
 
   const handleEmailLogin = () => emailInput.current?.focus();
+  const router = useRouter();
 
   // Inscription
   const handleRegister = () => {
-    Alert.alert('Inscription', 'La navigation vers Register sera ajoutée prochainement.');
+  router.push('/signUp');
   };
 
   return (
